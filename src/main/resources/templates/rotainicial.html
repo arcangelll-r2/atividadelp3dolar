@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>conversao</title>
+    <link rel="stylesheet" href="estilos.css"/>
+</head>
+<body>
+
+<div class="conteiner">
+    <h1>Converter moedas</h1>
+    <div>
+    <h1>Real para dolar</h1>
+    <form action="/enviar" method="post" th:object="${formulario}">
+    <input class="entrada" type="text" th:field="*{valor}"/><input type="submit" class="botao" > <p class="name">Reais são US$<span th:text="${dolar}"></span> dolares.</p>
+    </form>
+    </div>
+
+    <div>
+    <h1>Dolar para real</h1>
+    <form action="/enviar2" method="post" th:object="${formulario2}">
+        <input class="entrada" type="text" th:field="*{valor2}"/><input type="submit" class="botao" > <p class="name">Dolares são R$<span th:text="${real}"></span> reais.</p>
+    </form>
+    </div>
+</div>
+<style style="text/css">
+        .bounce {
+            height: 50px;
+            overflow: hidden;
+            position: relative;
+            background: #fefefe;
+            color: #333;
+            border: 1px solid #4a4a4a;
+        }
+
+        .bounce p {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            line-height: 50px;
+            text-align: center;
+            -moz-transform: translateX(50%);
+            -webkit-transform: translateX(50%);
+            transform: translateX(50%);
+            -moz-animation: bouncing-text 5s linear infinite alternate;
+            -webkit-animation: bouncing-text 5s linear infinite alternate;
+            animation: bouncing-text 10s linear infinite alternate;
+        }
+
+        @-moz-keyframes bouncing-text {
+            0% {
+                -moz-transform: translateX(50%);
+            }
+            100% {
+                -moz-transform: translateX(-50%);
+            }
+        }
+
+        @-webkit-keyframes bouncing-text {
+            0% {
+                -webkit-transform: translateX(50%);
+            }
+            100% {
+                -webkit-transform: translateX(-50%);
+            }
+        }
+
+        @keyframes bouncing-text {
+            0% {
+                -moz-transform: translateX(50%);
+                -webkit-transform: translateX(50%);
+                transform: translateX(50%);
+            }
+            100% {
+                -moz-transform: translateX(-50%);
+                -webkit-transform: translateX(-50%);
+                transform: translateX(-50%);
+            }
+        }
+    </style>
+
+<div class="bounce">
+    <p> O melhor conversor de moedas!! </p>
+</div>
+
+</body>
+</html>

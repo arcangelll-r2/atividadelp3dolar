@@ -1,0 +1,32 @@
+html, body {
+	background-color: gray;
+	height: 100%;
+}
+.conteiner{
+ display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items:center;
+    margin:3%;
+    background-color: orange;
+    border-radius:100px;
+}
+.entrada{
+     padding:10px;
+    font-size:25px;
+    width: 60px;
+    text-align: right;
+    border-radius: 10px;
+    margin-right: 10px;
+}
+.botao{
+    padding:10px;
+    font-size:15px;
+    width: 90px;
+    text-align: right;
+    border-radius: 10px;
+}
+.name{
+font-size:25px;
+
+}
